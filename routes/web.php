@@ -13,6 +13,9 @@ use App\Http\Controllers\SkillsController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/projects', [ProjectController::class, 'index']);
+Route::get('/experience', [ExperienceController::class, 'index']);
 Route::get('/skills', [SkillsController::class, 'index']);
 
 Route::get('/', function () {

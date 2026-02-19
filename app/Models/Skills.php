@@ -9,6 +9,8 @@ class Skills extends Model
    protected $table = "skills";
 
    protected $fillable = [
-    'name', 'level'
+    'name', 
+    'level'
+    
    ];
 }
