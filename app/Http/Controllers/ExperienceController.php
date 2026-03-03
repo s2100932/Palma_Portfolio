@@ -9,7 +9,7 @@ class ExperienceController extends Controller
 {
     public function index()
     {
-    $Experiences = Experience::all();
+    $experiences = Experience::all();
 
     return view('pages.experience', compact('experiences'));
     }
