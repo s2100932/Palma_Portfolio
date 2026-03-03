@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SkillsController;
+use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,16 +20,3 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/projects', [ProjectController::class, 'index']);
 Route::get('/experience', [ExperienceController::class, 'index']);
 Route::get('/skills', [SkillsController::class, 'index']);
-
-Route::get('/', function () {
-    return view('Home');
-});
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/projects', function () {
-    return view('projects');
-});
-Route::get('/contacts', function () {
-    return view('contacts');
-});
