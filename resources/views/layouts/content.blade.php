@@ -1,8 +1,8 @@
 @include('layouts.header')
 @include('layouts.navbar')
 
-<main>
+<div class="container mt-5">
     @yield('content')
-</main>
+</div>
 
 @include('layouts.footer')

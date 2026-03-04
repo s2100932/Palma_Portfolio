@@ -12,6 +12,7 @@ class Project extends Model
         'title',
         'tech_stack',
         'description',
+        'linl',
         'year'
     ];
 }

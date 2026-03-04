@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('tech_stack');
             $table->string('description');
+            $table->string('link');
             $table->integer('year');
             $table->timestamps();
         });

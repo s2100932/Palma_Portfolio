@@ -7,10 +7,10 @@ use App\Models\Home;
 
 class HomeController extends Controller
 {
-    public function index()
-    {
-    $profiles = Home::all();
+    // Home page shows profile
+    public function index() {
+        $profile = Home::first();
 
-    return view('pages.home', compact('profiles'));
+        return view('pages.home', compact('profile')); // home.blade.php = profile
     }
 }

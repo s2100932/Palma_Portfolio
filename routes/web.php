@@ -16,7 +16,7 @@ use App\Http\Controllers\HomeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/projects', [ProjectController::class, 'index']);
-Route::get('/experience', [ExperienceController::class, 'index']);
-Route::get('/skills', [SkillsController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
+Route::get('/experience', [ExperienceController::class, 'index'])->name('experiences');
+Route::get('/skills', [SkillsController::class, 'index'])->name('skills');

@@ -14,7 +14,7 @@ class ProjectsTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('projects')->insert([
-            ['title' => 'Laravel_Project', 'tech_stack' => '...', 'description' => '...', 'year' => 2026]
+            ['title' => 'Laravel_Project', 'tech_stack' => 'Fronend, Backend', 'description' => 'I made this project to show what skills and projects I have made through out college', 'link' => 'https://github.com/s2100932/Palma_Portfolio', 'year' => 2026]
         ]);
     }
 }

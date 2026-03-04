@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('title');
             $table->string('bio');
-            $table->integer('contact');
+            $table->string('contact');
             $table->string('email');
             $table->string('location');
             $table->timestamps();
