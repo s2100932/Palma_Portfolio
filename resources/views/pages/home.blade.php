@@ -5,7 +5,7 @@
 @section('content')
 <div class="row">
     <div class="col-md-4">
-        <img src="{{ asset('images/profile.jpg') }}" alt="Profile" class="img-fluid rounded-circle mb-3">
+        <img src="/images/profile.jpg" alt="Profile" class="img-fluid rounded-circle mb-3">
     </div>
     <div class="col-md-8">
         <h1>{{ $profile->first_name }} {{ $profile->last_name }}</h1>
