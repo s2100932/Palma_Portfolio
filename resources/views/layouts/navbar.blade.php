@@ -18,6 +18,12 @@
                 <li class="nav-item">
                     <a class="nav-link @if(request()->routeIs('experiences')) active @endif" href="{{ route('experiences') }}">Experiences</a>
                 </li>
+                <li class="nav-item">
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="nav-link btn btn-link">Logout</button>
+                </form>
+            </li>
             </ul>
         </div>
     </div>

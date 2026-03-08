@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder
             SkillsTableSeeder::class,
             ExperiencesTableSeeder::class,
             ProjectsTableSeeder::class,
-            ProfilesTableSeeder::class
+            ProfilesTableSeeder::class,
+            UserTableSeeder::class,
         ]);
     }
 }

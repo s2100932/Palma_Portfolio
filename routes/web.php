@@ -5,6 +5,7 @@ use App\Http\Controllers\SkillsController;
 use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,14 @@ use App\Http\Controllers\HomeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
-Route::get('/experience', [ExperienceController::class, 'index'])->name('experiences');
-Route::get('/skills', [SkillsController::class, 'index'])->name('skills');
+
+Route::get('/',  [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::middleware('isAdmin')->group(function () {
+    Route::get('/home',       [HomeController::class,       'index'])->name('home');
+    Route::get('/projects',   [ProjectController::class,    'index'])->name('projects');
+    Route::get('/experience', [ExperienceController::class, 'index'])->name('experiences');
+    Route::get('/skills',     [SkillsController::class,     'index'])->name('skills');
+});
