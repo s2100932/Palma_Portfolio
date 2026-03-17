@@ -20,3 +20,5 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/projects', [ProjectController::class, 'index']);
 Route::get('/experience', [ExperienceController::class, 'index']);
 Route::get('/skills', [SkillsController::class, 'index']);
+
+Route::resource('projects', ProjectController::class);
